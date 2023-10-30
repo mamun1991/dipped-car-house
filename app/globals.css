@@ -1,0 +1,298 @@
+/* Orbitron Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;600;700&family=Inter:wght@400;500&family=Open+Sans:wght@400;500;600&family=Orbitron:wght@500;600;700&family=Poppins:wght@600&display=swap");
+/* Satoshi Font Import Localy */
+@font-face {
+    font-family: "Satoshi-Regular";
+    src: url("../public/SatoshiFont/fonts/Satoshi-Regular.woff2") format("woff2"),
+        url("../public/SatoshiFont/fonts/Satoshi-Regular.woff") format("woff"),
+        url("../public/SatoshiFont/fonts/Satoshi-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+li {
+    font-family: "Satoshi-Regular";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+button {
+    font-family: "Orbitron";
+}
+p {
+    font-family: "Satoshi-Regular";
+    @apply text-xl text-[#f5f7f9] opacity-60;
+
+    letter-spacing: 0.03em;
+}
+h6,
+input,
+label,
+span {
+    font-family: "Satoshi-Regular";
+}
+body {
+    background-color: #222222;
+    color: #ffffff;
+}
+.nav_item > li > a {
+    font-family: "Orbitron";
+    transform: translateX(0px) !important;
+    transition: 0.5s all ease !important;
+    @apply font-semibold text-lg text-white;
+}
+.nav_item > li > a:hover {
+    color: #4ff;
+}
+.active {
+    color: #4ff !important;
+}
+
+@layer base {
+    h2 {
+        @apply font-bold text-4xl leading-[75px] text-white;
+    }
+    h3 {
+        @apply font-bold text-[31px] leading-[39px] text-white;
+    }
+    /* ::::::::::::::::::::::: Responsive Mobile::::::::::::::::::: */
+    @media only screen and (max-width: 767px) {
+    }
+}
+@layer components {
+    .btn {
+        @apply flex flex-row justify-center items-center rounded;
+    }
+    .btn_primary {
+        box-shadow: 0px 12px 40px -4px rgba(79, 254, 243, 0.3);
+        @apply font-semibold text-base text-[#1d242d] bg-[#4ffef3];
+        transform: translateX(0px) !important;
+        transition: 0.5s all ease !important;
+        animation: glow 5s infinite linear alternate;
+    }
+
+    @keyframes glow {
+        0% {
+            box-shadow: 0px 12px 40px -4px rgba(35, 111, 106, 0.3);
+        }
+        100%{
+            box-shadow: 0px 12px 40px -4px rgb(0, 255, 238);
+        }
+   
+    }
+    .btn_primary:hover {
+        @apply bg-transparent border-[#4fff] rounded text-[#4ff];
+        color: aqua !important;
+    }
+    /* navbar */
+    .drop_down_link {
+        @apply block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white;
+    }
+    .btn_secondary:hover > .btn_primary {
+        @apply bg-transparent border-[#4fff] rounded text-[#4ff];
+        color: aqua !important;
+    }
+
+    .btn_primary:hover .btn_secondary {
+        @apply bg-transparent border-[#4fff] rounded text-[#4ff];
+        color: aqua !important;
+    }
+    .btn_secondary {
+        @apply bg-transparent font-semibold text-xl border-2 border-[#4fff] rounded text-[#4ffef3];
+        transform: translateX(0px) !important;
+        transition: 0.5s all ease !important;
+    }
+    .btn_secondary:hover {
+        @apply bg-[#4ff] text-[#222];
+    }
+    /* ::::::+++++++ HERO ++++++::::::::::: */
+    .hero_aria {
+        background-image: url(../public/img/about_banner.jpg);
+
+        @apply bg-no-repeat bg-right bg-contain h-[467px];
+    }
+    .shape {
+        background-image: url(../public/line.png);
+    }
+    /* :::::::: HOME PAGE ::::::::::: */
+    /* .home_banner {
+    background-image: url(../public/img/home_banner.png);
+    @apply bg-no-repeat bg-right bg-contain h-[450px];
+  } */
+
+    /*  :::::: SERVICES :::::::::: */
+    /* .services_slider_title {
+    background-image: url(../public/img/SERVICES.png);
+    @apply bg-no-repeat h-[100px] grid bg-contain;
+  } */
+    .services_slider_title > h5 {
+        @apply text-[#4ffef3] text-lg max-w-[600px] items-center justify-around relative flex text-center;
+        margin: 43px -4px;
+        margin: 25px 16px 47px 15px;
+    }
+    .services_slider_title h5::after {
+        content: "";
+        @apply block w-[254px] h-1 bg-[#4ff] left-0 top-1/2 opacity-50 absolute;
+    }
+    @media only screen and (max-width: 767px) {
+        .services_slider_title > h5 {
+            margin: 43px -4px;
+            top: -16%;
+            margin: 25px 16px 47px 15px;
+        }
+        button {
+            font-size: 14px !important;
+        }
+        .services_slider_title h5::after {
+            left: 0;
+            top: 36%;
+        }
+        h2 {
+            @apply font-bold text-[32px] leading-[55px] text-white;
+        }
+        h3 {
+            @apply font-bold text-[24px] leading-[39px] text-white;
+        }
+        p {
+            @apply text-base;
+        }
+    }
+    .casuser_container {
+        background: linear-gradient(90.13deg, #101010 0.11%, rgba(13, 13, 13, 0.791667) 77.82%, rgba(0, 0, 0, 0.24) 99.89%),
+            url(../public/img/about_banner.jpg);
+        padding: 90px 0;
+        @apply bg-no-repeat bg-cover h-full mt-20;
+    }
+    .gallary_wrapper {
+        background: linear-gradient(90.13deg, #101010 0.11%, rgba(13, 13, 13, 0.791667) 77.82%, rgba(0, 0, 0, 0.24) 99.89%),
+            url(../public/img/gallary_banner.jpg);
+        @apply bg-no-repeat bg-cover h-full;
+    }
+    /* mobile navbar */
+    .mobile_navbar {
+        transform: translateX(0px) !important;
+        transition: 0.5s all ease !important;
+    }
+    /* ====Contact Page====== */
+    .contact_hero_aria {
+        background: linear-gradient(90.13deg, #101010 0.11%, rgba(13, 13, 13, 0.791667) 77.82%, rgba(0, 0, 0, 0.24) 99.89%),
+            url(../public/img/contact/contact_banner.jpg);
+
+        @apply bg-no-repeat h-auto w-full bg-center bg-cover;
+    }
+
+    /*  */
+    .PhoneInput {
+        @apply flex items-center gap-3;
+    }
+    .PhoneInput > div > select.PhoneInputCountrySelect {
+        @apply absolute top-0 left-0 h-full w-full z-50 rounded-none cursor-pointer;
+        background: #222222 !important;
+    }
+    .PhoneInput > input.PhoneInputInput {
+        @apply text-xl p-1 rounded outline-none;
+        color: #222222 !important;
+    }
+    /* ::::::::::::::::services::::::::::::::::: */
+    .services_hero_aria {
+        background: linear-gradient(90.13deg, #101010 0.11%, rgba(13, 13, 13, 0.791667) 77.82%, rgba(0, 0, 0, 0.24) 99.89%),
+            url(../public/img/about_banner.jpg);
+
+        @apply bg-no-repeat h-[90vh] w-full bg-cover bg-center;
+    }
+    .gallary_img {
+        grid-template-columns: repeat(2, minmax(0, 300px));
+    }
+    #dropdownHoverButton:hover .service_dropdown {
+        display: block !important;
+    }
+
+    /* :::::::: Wheeel ::::::::: */
+    .wheel_hero_aria {
+        background: linear-gradient(90.13deg, #101010 0.11%, rgba(13, 13, 13, 0.791667) 77.82%, rgba(0, 0, 0, 0.24) 99.89%),
+            url(../public/img/services/wheel_banner.jpg);
+
+        @apply bg-no-repeat h-auto w-full bg-center bg-cover;
+    }
+    .window_tinting_box_2 {
+        border-radius: 20px 0px 0px 20px;
+    }
+    .windowTintingService > li > span {
+        font-family: "Orbitron";
+    }
+    .window_tinting_hero {
+        background: linear-gradient(90.13deg, #101010 0.11%, rgba(13, 13, 13, 0.791667) 77.82%, rgba(0, 0, 0, 0.24) 99.89%),
+            url(../public/img/services/window_tinting_banner.jpg);
+
+        @apply bg-no-repeat h-auto w-full bg-center bg-cover;
+    }
+}
+/* ========= input form  =============*/
+.react-tel-input .form-control {
+    margin-left: 40px !important;
+    padding: 5px !important;
+    background: #ffffff;
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    line-height: 25px;
+    color: #222222 !important;
+    width: -webkit-fill-available !important;
+    outline: none;
+}
+.react-tel-input .country-list {
+    background: #222 !important;
+}
+.coverflow__container__1P-xE {
+    position: relative;
+    background: rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    padding: 0;
+    height: 400px !important;
+    width: 590px !important;
+    overflow: hidden;
+    outline: none;
+}
+.coverflow__cover__25-7e {
+    display: block;
+    height: 230px !important;
+    width: 100%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+@media only screen and (max-width: 840px) {
+    .react-tel-input .form-control {
+        width: 100%;
+        width: -moz-available;
+        width: -webkit-fill-available;
+        width: stretch;
+    }
+    .services_hero_aria {
+        background: linear-gradient(90.13deg, #101010 0.11%, rgba(13, 13, 13, 0.791667) 77.82%, rgba(0, 0, 0, 0.24) 99.89%),
+            url(../public/img/about_banner.jpg);
+
+        @apply bg-no-repeat h-[550px] w-full bg-cover bg-center;
+    }
+}
+/* services_hero_aria */
+.text_stroke {
+    color: #222222;
+    text-shadow: -1px -1px 0 #4ffef3, 1px -1px 0 #4ffef3, -1px 1px 0 #4ffef3, 1px 1px 0 #4ffef3;
+}
+
+.swiper-scrollbar-drag {
+    background: #4ffef3 !important;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #4ffef3;
+}

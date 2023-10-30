@@ -1,0 +1,31 @@
+.swiper {
+  width: 600px;
+  height: 600px;
+  padding: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 600px;
+  height: 600px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+.style_swiper__5lqH5 .swiper-button-prev {
+  width: 45px !important;
+  height: 45px !important;
+  background: black !important ;
+  border-radius: 50% !important;
+  opacity: 0.6;
+}
+.style_swiper__5lqH5 .swiper-button-next {
+  width: 45px !important;
+  height: 45px !important;
+  background: black !important ;
+  border-radius: 50% !important;
+  opacity: 0.6;
+}
